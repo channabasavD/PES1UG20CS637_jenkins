@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'g++ -o this is error'
                 sh 'g++ -o PES1UG20CS637 PES1UG20CS637.cpp'
                 build job : 'PES1UG20CS637-1'
                 echo 'Build Successful'
